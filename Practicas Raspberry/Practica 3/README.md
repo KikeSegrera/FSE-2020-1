@@ -6,7 +6,7 @@
 * Martínez Segrera Daniel Enrique
 * Salinas Navarro Diego Alberto
 
-## Respuestas.
+## Respuestas
 
 1. ¿Cuantas formas de configurar y programar hay disponibles en la raspberry pi?
     - Para configurar la Raspberry Pi podemos utilizar la interfaz gráfica o desde la terminal (SSH, Serial, Wi-fi).
