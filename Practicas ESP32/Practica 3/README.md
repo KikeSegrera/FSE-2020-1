@@ -1,4 +1,4 @@
-# FSE-ESP32: Práctica 3 (Examen parcial 1)
+# FSE-ESP32: Práctica 3 (Examen Parcial 1)
 
 ## Integrantes
 * Alvarado Díaz Marco Antonio
