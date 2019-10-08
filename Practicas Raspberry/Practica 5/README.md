@@ -1,4 +1,4 @@
-# FSE 2020-1. Práctica 5: Raspberry Pi
+# FSE-Práctica 5: Raspberry Pi
 
 ## Integrantes
 * Alvarado Díaz Marco Antonio
