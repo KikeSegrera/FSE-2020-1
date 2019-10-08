@@ -1,4 +1,4 @@
-# FSE 2020-1 - Práctica 2 (ESP32)
+# FSE-ESP32: Práctica 2
 
 ## Integrantes
 * Alvarado Díaz Marco Antonio
