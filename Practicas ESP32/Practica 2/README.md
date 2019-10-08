@@ -1,6 +1,6 @@
 # FSE 2020-1 - Práctica 2 (ESP32)
 
-## Nombre de los integrantes:
+## Integrantes
 * Alvarado Díaz Marco Antonio
 * Martínez Segrera Daniel Enrique
 * Salinas Navarro Diego Alberto
