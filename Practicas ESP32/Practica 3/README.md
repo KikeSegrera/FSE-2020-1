@@ -15,4 +15,4 @@
 2. Procesamiento de datos en la Raspberry PI y comunicación con la computadora: Se implementó un programa en Python que procesara los datos previamente recibidos del ESP32,les diera un formato específico y los enviara a través del USB serial a la computadora.
 3. Datos finales en la computadora: Los datos son mostrados en la consola serial de la computadora.
 
-[Video]()
+[Video](https://www.youtube.com/watch?v=O4JLoH3avPs)
