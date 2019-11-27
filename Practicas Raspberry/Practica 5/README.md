@@ -11,3 +11,5 @@
 
 ## Desarrollo
 Se montó de forma manual una memoria USB en un directorio fijo del sistema operativo de la Raspberry PI, acto seguido se realizó un programa en Python capaz de crear un archivo .csv en el directorio correspondiente a la USB con el formato solicitado.
+
+[Video](https://www.youtube.com/watch?v=YZ4zvZSM5OI)
