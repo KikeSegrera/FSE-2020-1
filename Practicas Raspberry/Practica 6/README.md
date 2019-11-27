@@ -11,3 +11,5 @@
 ## Desarrollo
 Se habilitó la comunicación I2C en la Raspberry PI y se creó un programa en Python que utiliza las funciones necesarias con la finalidad leer los registros y escribir dentro de ellos para establecer la hora del reloj DS1307 y al momento de realizar la consulta de la hora, almacenar en una USB el archivo que contenga la fecha y la hora con determinado formato, en nuestro caso fue:
 * Año, mes, día, hora, minutos, segundos.
+
+[Video](https://www.youtube.com/watch?v=yZz6PKIHa4U)
