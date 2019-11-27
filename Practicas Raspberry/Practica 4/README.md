@@ -15,4 +15,4 @@
    1. Un programa en Python que escriba una cadena quince veces en la terminal de la PC, se encuentra en el código `uart1.py`.
    1. Un programa en Python que lea una cadena proveniente desde la PC separada por comas y la imprima con un formato específico en la terminal de la Raspberry Pi, se encuentra en el código `uart2.py`.
 
-[Video]()
+[Video](https://www.youtube.com/watch?v=nfE61USiAkk)
