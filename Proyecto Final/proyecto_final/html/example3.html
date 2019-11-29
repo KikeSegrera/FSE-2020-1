@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	padding: 30px;
+	background-color: #c0c0c0;
+}
+
+code {
+	font-size: 15px;
+	background-color: #e4e4e4;
+}
+
+p.code {
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+a.w:link, a.w:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.w:hover, a.w:active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a.b:link, a.b:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.b:hover, a.b:active {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.header {
+	padding: 30px;
+	font-size: 30px;
+	text-align: left;
+	background-color: #7f7f7f;
+}
+
+.leftcolumn {   
+	float: left;
+	width: 20%;
+	padding-right: 20px;
+}
+
+.rightcolumn {
+	float: left;
+	width: 80%;
+}
+
+.cardwhite {
+	background-color: #ffffff;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardblack {
+	background-color: #000000;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardgray {
+	background-color: #e4e4e4;
+	padding: 30px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.responsiveimage {
+	width: 100%;
+	max-width: 165px;
+	height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="row">
+	<div class="leftcolumn">
+		<center><img src="code.png" alt="Code Symbol" class="responsiveimage"/></center>
+	</div>
+	<div class="rightcolumn">
+		<div class="header">
+			<h2>ADC1 Example</h2>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="leftcolumn">
+		<div class="cardblack">
+			<p><a class="w" href="index.html">Home</a></p>
+			<p><a class="w" href="about.html">About</a></p>
+			<p style="color:#ffffff">Examples: </p>
+			<ul style="color:#ffffff">
+				<li><a class="w" href="example1.html">SPIFFS</a></li>
+				<li><a class="w" href="example2.html">UART</a></li>
+				<li><a class="w" href="example3.html">ADC</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="rightcolumn">
+		<div class="cardwhite">
+			<hr>
+			<h3>Description</h3>
+			<p>This example shows how to configure ADC1 and read the voltage connected to GPIO pin.</p>
+			<p>In this example, we use <code>ADC_UNIT_1</code> by default, we need to connect a voltage source (0 ~ 3.3v) to GPIO34. If another ADC unit is selected in your application, you need to change the GPIO pin (please refer to Chapter 4.11 of the <code>ESP32 Technical Reference Manual</code>).</p>
+			<hr>
+			<h3>Example Output</h3>
+			<p>Running this example, you will see the following log output on the serial monitor:</p>
+			<div class="cardgray">
+				<p class="code">
+				Raw: 486	Voltage: 189mV<br>
+				Raw: 435	Voltage: 177mV<br>
+				Raw: 225	Voltage: 128mV<br>
+				Raw: 18	    Voltage: 79mV<br>
+				</p>
+			</div>
+			<hr>
+			<center><h3><a class="b" href="adc.zip">Download files</a></h3></center>
+			<hr>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

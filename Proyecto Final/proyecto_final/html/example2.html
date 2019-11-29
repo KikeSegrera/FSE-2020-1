@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	padding: 30px;
+	background-color: #c0c0c0;
+}
+
+code {
+	font-size: 15px;
+	background-color: #e4e4e4;
+}
+
+p.code {
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+a.w:link, a.w:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.w:hover, a.w:active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a.b:link, a.b:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.b:hover, a.b:active {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.header {
+	padding: 30px;
+	font-size: 30px;
+	text-align: left;
+	background-color: #7f7f7f;
+}
+
+.leftcolumn {   
+	float: left;
+	width: 20%;
+	padding-right: 20px;
+}
+
+.rightcolumn {
+	float: left;
+	width: 80%;
+}
+
+.cardwhite {
+	background-color: #ffffff;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardblack {
+	background-color: #000000;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardgray {
+	background-color: #e4e4e4;
+	padding: 30px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.responsiveimage {
+	width: 100%;
+	max-width: 165px;
+	height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="row">
+	<div class="leftcolumn">
+		<center><img src="code.png" alt="Code Symbol" class="responsiveimage"/></center>
+	</div>
+	<div class="rightcolumn">
+		<div class="header">
+			<h2>UART Asynchronous Example with Separate Receive and Transfer Tasks</h2>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="leftcolumn">
+		<div class="cardblack">
+			<p><a class="w" href="index.html">Home</a></p>
+			<p><a class="w" href="about.html">About</a></p>
+			<p style="color:#ffffff">Examples: </p>
+			<ul style="color:#ffffff">
+				<li><a class="w" href="example1.html">SPIFFS</a></li>
+				<li><a class="w" href="example2.html">UART</a></li>
+				<li><a class="w" href="example3.html">ADC</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="rightcolumn">
+		<div class="cardwhite">
+			<hr>
+			<h3>Description</h3>
+			<p>This example demonstrates how two asynchronous tasks can use the same UART interface for communication. One can use this example to develop more complex applications for serial communication.</p>
+			<p>The example starts two FreeRTOS tasks:</p>
+			<ol>
+				<li>The first task periodically transmits <code>Hello world</code> via the UART.</li>
+				<li>The second task task listens, receives and prints data from the UART.</li>
+			</ol>
+			<hr>
+			<h3>Example Output</h3>
+			<p>You will receive the following repeating output from the monitoring console:</p>
+			<div class="cardgray">
+				<p class="code">
+				...<br>
+				I (3261) TX_TASK: Wrote 11 bytes<br>
+				I (4261) RX_TASK: Read 11 bytes: 'Hello world'<br>
+				I (4261) RX_TASK: 0x3ffb821c   48 65 6c 6c 6f 20 77 6f  72 6c 64   |Hello world|<br>
+				...
+				</p>
+			</div>
+			<hr>
+			<center><h3><a class="b" href="uart_async_rxtxtasks.zip">Download files</a></h3></center>
+			<hr>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

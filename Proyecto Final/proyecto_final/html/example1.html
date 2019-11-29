@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Tw Cen MT";
+	font-size: 20px;
+	padding: 30px;
+	background-color: #c0c0c0;
+}
+
+code {
+	font-size: 15px;
+	background-color: #e4e4e4;
+}
+
+p.code {
+	font-family: "Courier";
+	font-size: 12px;
+}
+
+a.w:link, a.w:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.w:hover, a.w:active {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a.b:link, a.b:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a.b:hover, a.b:active {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.header {
+	padding: 30px;
+	font-size: 30px;
+	text-align: left;
+	background-color: #7f7f7f;
+}
+
+.leftcolumn {   
+	float: left;
+	width: 20%;
+	padding-right: 20px;
+}
+
+.rightcolumn {
+	float: left;
+	width: 80%;
+}
+
+.cardwhite {
+	background-color: #ffffff;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardblack {
+	background-color: #000000;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.cardgray {
+	background-color: #e4e4e4;
+	padding: 30px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.responsiveimage {
+	width: 100%;
+	max-width: 165px;
+	height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="row">
+	<div class="leftcolumn">
+		<center><img src="code.png" alt="Code Symbol" class="responsiveimage"/></center>
+	</div>
+	<div class="rightcolumn">
+		<div class="header">
+			<h2>SPIFFS Example</h2>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="leftcolumn">
+		<div class="cardblack">
+			<p><a class="w" href="index.html">Home</a></p>
+			<p><a class="w" href="about.html">About</a></p>
+			<p style="color:#ffffff">Examples: </p>
+			<ul style="color:#ffffff">
+				<li><a class="w" href="example1.html">SPIFFS</a></li>
+				<li><a class="w" href="example2.html">UART</a></li>
+				<li><a class="w" href="example3.html">ADC</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="rightcolumn">
+		<div class="cardwhite">
+			<hr>
+			<h3>Description</h3>
+			<p>This example demonstrates how to use SPIFFS with ESP32. Example does the following steps:</p>
+			<ol>
+				<li>Use an "all-in-one" <code>sp_vfs_spiffs_register</code> function to: </li>
+				<ul>
+					<li>initialize SPIFFS,</li>
+					<li>mount SPIFFS filesystem using SPIFFS library (and format, if the filesystem can not be mounted),</li>
+					<li>register SPIFFS filesystem in VFS, enabling C standard library and POSIX functions to be used.</li>
+				</ul>
+				<li>Create a file using <code>fopen</code> and write to it using <code>fprintf</code>.</li>
+				<li>Rename the file. Before renaming, check if destination file already exists using <code>stat</code> function, and remove it using <code>unlink</code> function.</li>
+				<li>Open renamed file for reading, read back the line, and print it to the terminal.</li>
+			</ol>
+			<p>SPIFFS partition size is set in "partitions_example.csv" file.</p>
+			<hr>
+			<h3>Example Output</h3>
+			<p>Here is an example console output. In this case <code>format_if_mount_failed</code> parameter was set to <code>true</code> in the source code. SPIFFS was unformatted, so the initial mount has failed. SPIFFS was then formatted, and mounted again.</p>
+			<div class="cardgray">
+				<p class="code">
+				I (324) example: Initializing SPIFFS<br>
+				W (324) SPIFFS: mount failed, -10025. formatting...<br>
+				I (19414) example: Partition size: total: 896321, used: 0<br>
+				I (19414) example: Opening file<br>
+				I (19504) example: File written<br>
+				I (19544) example: Renaming file<br>
+				I (19584) example: Reading file<br>
+				I (19584) example: Read from file: 'Hello World!'<br>
+				I (19584) example: SPIFFS unmounted<br>
+				</p>
+			</div>
+			<p>To erase the contents of SPIFFS partition, run <code>idf.py</code> erase_flash command. Then upload the example again as described above.</p>
+			<hr>
+			<center><h3><a class="b" href="spiffs.zip">Download files</a></h3></center>
+			<hr>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

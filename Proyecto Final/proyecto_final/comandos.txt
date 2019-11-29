@@ -1,0 +1,2 @@
+python spiffsgen.py 0xF0000 ./html spiffs.bin
+python esptool.py --chip esp32 --port COM3 write_flash -z 0x110000 spiffs.bin
