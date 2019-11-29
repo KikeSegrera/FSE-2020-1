@@ -5,4 +5,4 @@
 * Martínez Segrera Daniel Enrique
 * Salinas Navarro Diego Alberto
 
-[Video]()
+[Video](https://www.youtube.com/watch?v=Nau6O0xKE78)
